@@ -27,9 +27,14 @@ export const setDay = (dateString) => (dispatch) => {
 export const getNotes = (dateString) => (dispatch) => {
   const notes = JSON.parse(localStorage.getItem('notes'));
   const formattedDate = moment(dateString).format('DD/MM/YY');
+  if (notes)
   dispatch({
     type: constants.GET_NOTES,
     payload: notes[formattedDate] ? notes[formattedDate] : [],
+  });
+  else dispatch({
+    type: constants.GET_NOTES,
+    payload: [],
   })
 };
 
