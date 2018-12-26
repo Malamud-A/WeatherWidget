@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/WeatherWidget/./precache-manifest.bc88ae9cd2defa0b34bb61024b7fc1bc.js"
+  "/WeatherWidget/precache-manifest.69e457e6852e2850f328aa38bd30e9e3.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/WeatherWidget/./index.html", {
+workbox.routing.registerNavigationRoute("/WeatherWidget/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
