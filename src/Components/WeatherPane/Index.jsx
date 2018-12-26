@@ -51,12 +51,12 @@ class WeatherPane extends PureComponent {
 
     const {currentDay, currentWeather, weatherForecast, weatherHistory} = this.props;
     const todayIsSelected = moment(currentDay).diff(moment(), 'days') === 0;
-    const weatherDay = (() => {
+    const weatherDay =  (() => {
       const currentDayMomentToToday = moment(currentDay).diff(moment(), 'days');
       const formattedCurrentDay = moment(currentDay).format("YYYY-MM-DD");
       if (currentDayMomentToToday === 0) return currentWeather;
       if (currentDayMomentToToday < 0) return weatherHistory.day;
-      if (currentDayMomentToToday > 0) return weatherForecast.find(el => el.date === formattedCurrentDay).day;
+      if (currentDayMomentToToday > 0 && weatherForecast.length) return weatherForecast.find(el => el.date === formattedCurrentDay).day;
     })();
 
     return (
