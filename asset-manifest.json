@@ -1,16 +1,16 @@
 {
-  "main.css": "/WeatherWidget/static/css/main.a5f1da31.chunk.css",
-  "main.js": "/WeatherWidget/static/js/main.007d3b14.chunk.js",
-  "main.js.map": "/WeatherWidget/static/js/main.007d3b14.chunk.js.map",
+  "main.css": "/WeatherWidget/static/css/main.8cae2c73.chunk.css",
+  "main.js": "/WeatherWidget/static/js/main.890a48ab.chunk.js",
+  "main.js.map": "/WeatherWidget/static/js/main.890a48ab.chunk.js.map",
   "static/css/1.ee39a274.chunk.css": "/WeatherWidget/static/css/1.ee39a274.chunk.css",
   "static/js/1.1c7b8a2d.chunk.js": "/WeatherWidget/static/js/1.1c7b8a2d.chunk.js",
   "static/js/1.1c7b8a2d.chunk.js.map": "/WeatherWidget/static/js/1.1c7b8a2d.chunk.js.map",
   "runtime~main.js": "/WeatherWidget/static/js/runtime~main.2fff8fe1.js",
   "runtime~main.js.map": "/WeatherWidget/static/js/runtime~main.2fff8fe1.js.map",
-  "static/css/main.a5f1da31.chunk.css.map": "/WeatherWidget/static/css/main.a5f1da31.chunk.css.map",
-  "static/media/styles.scss": "/WeatherWidget/static/media/sky_pic.9a97bbd6.jpg",
   "static/css/1.ee39a274.chunk.css.map": "/WeatherWidget/static/css/1.ee39a274.chunk.css.map",
+  "static/media/styles.scss": "/WeatherWidget/static/media/sky_pic.9a97bbd6.jpg",
+  "static/css/main.8cae2c73.chunk.css.map": "/WeatherWidget/static/css/main.8cae2c73.chunk.css.map",
   "index.html": "/WeatherWidget/index.html",
-  "precache-manifest.d8e0a8f838008dee5b11a3ce6f019c95.js": "/WeatherWidget/precache-manifest.d8e0a8f838008dee5b11a3ce6f019c95.js",
+  "precache-manifest.3e337acba2f690571eb4818dc977e9f8.js": "/WeatherWidget/precache-manifest.3e337acba2f690571eb4818dc977e9f8.js",
   "service-worker.js": "/WeatherWidget/service-worker.js"
 }
