@@ -8,7 +8,7 @@ export default {
     }
   }),
 
-  getCurrentWeather: (latlng) => axios.get('http://api.apixu.com/v1/current.json', {
+  getCurrentWeather: (latlng) => axios.get('https://api.apixu.com/v1/current.json', {
     params: {
       key: '1dc82a4d18514ec386672253182612',
       q: latlng.join(','),
@@ -17,7 +17,7 @@ export default {
 
   getWeatherHistory: (latlng, dateString) => {
     let dt = moment(dateString).format('YYYY-MM-DD');
-    return axios.get('http://api.apixu.com/v1/history.json', {
+    return axios.get('https://api.apixu.com/v1/history.json', {
     params: {
       key: '1dc82a4d18514ec386672253182612',
       q: latlng.join(','),
@@ -25,7 +25,7 @@ export default {
     }
   })},
 
-  getWeatherForecast: (latlng) => axios.get('http://api.apixu.com/v1/forecast.json', {
+  getWeatherForecast: (latlng) => axios.get('https://api.apixu.com/v1/forecast.json', {
     params: {
       key: '1dc82a4d18514ec386672253182612',
       q: latlng.join(','),

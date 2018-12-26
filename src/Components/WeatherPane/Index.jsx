@@ -13,7 +13,6 @@ class WeatherPane extends PureComponent {
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
           (position => {
-            console.log(position);
             const {coords} = position;
             this.props.setInitialCity([coords.latitude, coords.longitude]);
           })
@@ -68,7 +67,6 @@ class WeatherPane extends PureComponent {
           </div>
           <div className="weather-pane__footer">
 
-            {console.log(weatherDay)}
             {!!weatherDay && weatherDay.condition && (
                 <div className="weather-pane__forecast">
                   <img className="weather-pane__condition-img" src={weatherDay.condition.icon} alt=""/>
