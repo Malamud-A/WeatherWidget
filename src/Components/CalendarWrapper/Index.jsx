@@ -45,8 +45,6 @@ class CalendarWrapper extends Component {
   render() {
 
     const {currentDay} = this.props;
-    let now = moment();
-
     return (
         <div className="calendar">
           <div className="calendar-title">
