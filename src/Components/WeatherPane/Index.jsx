@@ -12,11 +12,10 @@ class WeatherPane extends PureComponent {
 
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
-          (position => {
-            const {coords} = position;
+          position => {
+            const { coords } = position;
             this.props.setInitialCity([coords.latitude, coords.longitude]);
-          })
-      );
+          }, () => this.props.setInitialCity([49,32]));
     } else alert("Please switch your browser to chrome")
   }
 
@@ -39,7 +38,7 @@ class WeatherPane extends PureComponent {
   };
 
   handleCityChange = (city) => {
-    const { currentDay } = this.props;
+    const {currentDay} = this.props;
     this.props.setCity(city);
     this.handleModalToggle('cities');
     this.props.getCurrentWeather(city.latlng);
@@ -51,7 +50,7 @@ class WeatherPane extends PureComponent {
 
     const {currentDay, currentWeather, weatherForecast, weatherHistory} = this.props;
     const todayIsSelected = moment(currentDay).diff(moment(), 'days') === 0;
-    const weatherDay =  (() => {
+    const weatherDay = (() => {
       const currentDayMomentToToday = moment(currentDay).diff(moment(), 'days');
       const formattedCurrentDay = moment(currentDay).format("YYYY-MM-DD");
       if (currentDayMomentToToday === 0) return currentWeather;
@@ -70,7 +69,8 @@ class WeatherPane extends PureComponent {
             {!!weatherDay && weatherDay.condition && (
                 <div className="weather-pane__forecast">
                   <img className="weather-pane__condition-img" src={weatherDay.condition.icon} alt=""/>
-                  <p className="weather-pane__temp">{parseInt(todayIsSelected ? weatherDay.temp_c : weatherDay.avgtemp_c)}<span>c</span></p>
+                  <p className="weather-pane__temp">{parseInt(todayIsSelected ? weatherDay.temp_c : weatherDay.avgtemp_c)}<span>c</span>
+                  </p>
                   <p className="weather-pane__condition-text">{weatherDay.condition.text}</p>
                 </div>
             )}
