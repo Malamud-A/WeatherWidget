@@ -1,0 +1,59 @@
+.weather-pane{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  //path relative to root styles
+  background: rgba(0, 0, 0, 0.5) url("./img/sky_pic.jpg") no-repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+  width: 40%;
+  padding: 30px 25px;
+  border-radius: 5px 0 0 5px;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  color: #fff;
+  &__week-day{
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 0;
+  }
+  &__date{
+    margin: 0;
+    color: #bacbdf;
+    font-size: 14px;
+  }
+  &__condition-img{
+    height: 60px;
+  }
+  &__temp{
+    font-size: 32px;
+    margin: 0;
+    span{
+      margin-left: 5px;
+      position: relative;
+      font-size: 28px;
+      &:before{
+        content: "\00b0";
+        position: absolute;
+        left: -4px;
+        top: -6px;
+      }
+    }
+  }
+  &__condition-text {
+    margin: 10px 0 5px;
+    text-transform: capitalize;
+  }
+  &__current-city-btn {
+    background: none;
+    border: none;
+    color: #9eadbf;
+    cursor: pointer;
+    svg {
+      margin-right: 5px;
+    }
+    &:hover{
+      color: #fff;
+    }
+  }
+}
